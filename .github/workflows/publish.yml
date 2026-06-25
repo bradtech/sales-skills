@@ -33,9 +33,6 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install dependencies
-        run: bun install --frozen-lockfile
-
       - name: Authenticate with registries
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -43,6 +40,12 @@ jobs:
         run: |
           echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
           echo "//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}" >> ~/.npmrc
+
+      - name: Resolve Workspace Dependencies for CI
+        run: node bin/publish-prepare.cjs
+
+      - name: Install dependencies
+        run: bun install
 
       - name: Run Publish script
         env:
