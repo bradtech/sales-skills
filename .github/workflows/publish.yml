@@ -3,14 +3,9 @@ name: Publish NPM Package
 on:
   workflow_dispatch:
   push:
-    branches:
-      - main
-    paths:
-      - 'skills/**'
-      - 'bin/**'
-      - 'package.json'
-      - 'bun.lock'
-      - '.github/workflows/publish.yml'
+    tags:
+      - 'v*'
+
 
 jobs:
   publish:
