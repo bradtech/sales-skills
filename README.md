@@ -98,3 +98,12 @@ cp -r skills/actions/* ~/.gemini/config/skills/
 
 Once linked/copied, the LLM agent will detect the frontmatter name and description in each `SKILL.md` (e.g. `google-calendar`, `odoo-integration`), matching user requests to the respective CLI tools and executing actions autonomously.
 
+---
+
+## Roadmap
+
+Future integrations planned for this skill set:
+- **Gmail Integration**: Automated email reading, sending, and syncing email thread histories with Odoo partners.
+- **Brad Central API Integration**: Direct interaction with the Brad Technology central API to orchestrate settings, workspace state, and cross-agent communications.
+
+

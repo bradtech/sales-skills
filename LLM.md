@@ -1,6 +1,22 @@
 # LLM Agent Skill Activation
 
-Activate and update all integration skills for your local or global LLM agents with a single command:
+## Installation from NPM Registry
+
+You can install the package directly from [npmjs.com/package/@bradtech/sales-skills](https://www.npmjs.com/package/@bradtech/sales-skills):
+
+```bash
+npm install @bradtech/sales-skills
+# or using Bun
+bun add @bradtech/sales-skills
+```
+
+This package depends on [@quatrain/skills](https://www.npmjs.com/package/@quatrain/skills) which provides the underlying agent class and logger wrapper utilities.
+
+---
+
+## Workspace Activation
+
+Activate and update all integration skills for your local or global LLM agents in your repository workspace with a single command:
 
 ```bash
 bun run setup-skills
